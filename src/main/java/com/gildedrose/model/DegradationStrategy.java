@@ -42,10 +42,10 @@ public enum DegradationStrategy {
                 item.setQuality(item.getQuality() +1);
             }
             if (item.getQuality() > item.getMaxQuality()) {
-                item.setQuality(50);
+                item.setQuality(item.getMaxQuality());
             }
             if (item.getSellInDays() < item.getMinQuality()) {
-                item.setQuality(0);
+                item.setQuality(item.getMinQuality());
             }
         }
     };
